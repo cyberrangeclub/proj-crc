@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "tahsin-e941"
+    labels:
+        app: "tahsin-e941"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: tahsina455-tahsin-e941.ef5372f0f9e54bafa7bd.eastus.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "tahsin-e941"
+                servicePort: 80
