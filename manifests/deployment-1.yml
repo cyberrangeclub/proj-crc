@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "tahsin-e941"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "tahsin-e941"
+  template:
+    metadata:
+      labels:
+        app: "tahsin-e941"
+    spec:
+      containers:
+        - name: "tahsin-e941"
+          image: "tahsin.azurecr.io/tahsin"
+          ports:
+          - containerPort: 80
